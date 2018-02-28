@@ -24,10 +24,12 @@ One possible suggestion to correct this problem would be to generate the target 
 
 # Application
 Here we use AlexNet for a simple implementation (after downloading a trained model from the internet: [a link](http://www.cs.toronto.edu/%7Eguerzhoy/tf_alexnet/bvlc_alexnet.npy)). 
+
 The output given by AlexNet for the poodle illustrated in figure 4 is ”miniature poodle”. The figure 4 illustrates the picture of the poodle and 9 crops taken for its original image. By looking at the crops, it makes a lot of sense to think that the crop containing the poodle’s face is the one carrying the most important information. Table 1 illustrates the distances between the crops in figure 4 and the original image. the face’s dog (Crop Id 7) is the one with the lowest distance as expected. We can see than the dog’s back and the dog’s tail comes afterwards, which makes a lot of sense. 
 Crop Id 
 distance to original image 
-| 1 | 100 | 
+
+| 1 | 100 |
 | 2 | 112.6 |
 |3|111.5|
 |4|97.4|
