@@ -19,7 +19,11 @@ As mentioned in the introduction, this project is restricted in providing a ”j
 
 ## Neural networks: Understanding errors
 In this section we will give a research track aiming to correct misclassified inputs. Generating crops from the input and feeding them into the neural network, can help us to understand the misclassified inputs. In the following we will deal with images (computer vision) but the proposed ideas should work for any other type of data. 
+
+![Dog in grass](BlackBox/dog2.png)
+
 Let’s consider the case where the classifier predicts ”grass” for a ”dog” as the one in figure 3. After generating the crops from the original image, we can calculate the distance between the output of each crop from a specific layer (the last layer for instance, before the softmax function) and the output of the original image from the same layer . Now let’s imagine that the lowest distance is the one between the original image and its crop that represents the grass. One hypothesis can be that the neural network focused its activations on the grass part leading to a misclassification. 
+
 One possible suggestion to correct this problem would be to generate the target crop (the crop that represents most the picture. In the case of figure 3 the dog face for example) for a set of the training data and finetune the network by adding an additional term in the loss function. This term would represent the distance between the crop output from a specific layer and the original image output from the same layer (we can use the last layer before softmax, or find the optimal one using a cross validation). By adding the distance term in the loss function we will be minimizing it during the training process and then encouraging the neural network to learn sophisticated patterns from the crop. 
 
 # Application
@@ -29,7 +33,7 @@ The output given by AlexNet for the poodle illustrated in figure 4 is ”miniatu
 Crop Id 
 distance to original image 
 
-| Image | Distance |
+| Crop id | Distance |
 | - | - |
 | 1 | 100 |
 | 2 | 112.6 |
