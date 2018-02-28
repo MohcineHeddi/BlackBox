@@ -29,15 +29,17 @@ The output given by AlexNet for the poodle illustrated in figure 4 is ”miniatu
 Crop Id 
 distance to original image 
 
+| Image | Distance |
+| - | - |
 | 1 | 100 |
 | 2 | 112.6 |
-|3|111.5|
-|4|97.4|
-|5|118.6|
-|6|114.2|
-|7|82.6|
-|8|113.6|
-|9|111.7|
+| 3 | 111.5 |
+| 4 | 97.4 |
+| 5 | 118.6 |
+| 6 | 114.2 |
+| 7 | 82.6 |
+| 8 | 113.6 |
+| 9 | 111.7 |
 
 # Conclusion
 This repo presented some ideas aiming to explain the outputs of complex machine learning classifiers. Most of the techniques use crops generated form original images to infer an explanation for the prediction. A better option might be to process an image segmentation, then use the different segments instead of the crops. 
