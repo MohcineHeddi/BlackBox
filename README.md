@@ -20,7 +20,7 @@ As mentioned in the introduction, this project is restricted in providing a ”j
 ## Neural networks: Understanding errors
 In this section we will give a research track aiming to correct misclassified inputs. Generating crops from the input and feeding them into the neural network, can help us to understand the misclassified inputs. In the following we will deal with images (computer vision) but the proposed ideas should work for any other type of data. 
 
-![Dog in grass](BlackBox/dog2.png)
+![Dog in grass](https://github.com/mheddi/BlackBox/dog2.png)
 
 Let’s consider the case where the classifier predicts ”grass” for a ”dog” as the one in figure 3. After generating the crops from the original image, we can calculate the distance between the output of each crop from a specific layer (the last layer for instance, before the softmax function) and the output of the original image from the same layer . Now let’s imagine that the lowest distance is the one between the original image and its crop that represents the grass. One hypothesis can be that the neural network focused its activations on the grass part leading to a misclassification. 
 
